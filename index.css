@@ -2,49 +2,36 @@ body {
     margin: 0;
 }
 
-#navigation {
-    position: fixed;
-    width: 100%;
-    height: 5.5vw;
-    z-index:2;
-    background-color: black;
-}
-
 #background {
-    position: relative;
-    top: 5.5vw;
+    position:relative;
+    top: 0;
     width: 100%;
+    height: 60vw;
+    background-image:url("../img/background.jpg");
+    background-size: 100% 100%;
 }
 
 #background img {
     width: 100%;
     height: 100%;
+    
 }
 
 #picture {
     position: absolute;
-    top:15%;
+    top:25%;
     left: 8%;
     display: flex;
 }
 
 #picture img {
-    width: 22vw;
-    height: 22.5vw;
+    width: 31vw;
+    height: 25.5vw;
     filter: grayscale(100%);
     transition: .5s ease-in-out;
 }
 
-#picture img::after{
-    content:"";
-    position:absolute;
-    right: -2px;
-    left: -2px;
-    top: -2px;
-    bottom: -2px;
-    background: #fff;
-    z-index:-1;
-}
+
 
 #picture img:hover {
     filter: grayscale(0%);
@@ -54,40 +41,50 @@ body {
     color: white;
     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: #0066cc; 
+    padding-top: 2vw;
     padding-left: 1.5vw;
     font-size: 4vw;
     font-weight:520;
     font-family: 'Carter One', cursive;
 }
 
+
+#visit {
+    width: 100%;
+    background-color:  rgb(217, 217, 217);
+    height: 150px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5em;
+}
+
 #social {
-    position: absolute;
-    top:60%;
-    left: 8%;
-    z-index: 1;
     display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
 }
 
 #social a {
+    margin-top: 30px;
     display : inline-flex;
-    font-size: 1.5vw;
-    width: 3vw;
-    height: 3vw;
+    font-size: 40px;
+    width: 90px;
+    height: 90px;
     text-decoration: none;
     justify-content: center;
     align-items:center;
-    margin: 0 1.5vw;
+    margin: 0 40px;
     color: white;
 }
 
 #social a::before {
     content: '';
     position: absolute;
-    width:4vw;
-    height: 4vw;
+    width:90px;
+    height: 90px;
     background: linear-gradient(45deg,#22a6b3,#30336b);
     border-radius: 50%;
-    z-index:-1;
     transition: 0.3s ease-in;
 }
 
@@ -97,24 +94,197 @@ body {
 
 #social a i {
     transition: 0.3s ease-in;
+    z-index: 1;
 }
 
 #social a:hover i {
     background: linear-gradient(45deg,red,blue);
     background-clip: text;
     -webkit-text-fill-color:transparent;
-    transform:scale(2.4);
+    transform:scale(1.5);
 
 }
 
-@media screen and (max-width:1200px) {
-    #picture {
-        position: absolute;
-        top: 110%;
+#intro {
+    position: relative;
+    background-color: rgb(255, 153, 51,0.3);
+    background-size: 100% 100%;
+    height:420px;
+    width: 100%;
+    text-align: center;
+}
+ 
+.info {
+    padding-top: 15px;
+    font-size: 1.5em;
+    font-family: 'Merienda', cursive;
+}
+
+#imagine {
+    padding-top: 45px;
+    padding-bottom: 15px;
+    font-family: 'Merienda', cursive;
+    font-size: 2em;
+}
+
+#bottom {
+    position: relative;
+    background-color: black;
+    height:40px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+
+#intro button {
+    
+    margin-top: 30px;
+    background-color: orangered;
+    width:90px;
+    height: 35px;
+    border:none;
+    font-size: 1em;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Fredoka One', cursive;
+    box-shadow: 2px 2px 2px black;
+}
+
+#intro button:hover {
+    cursor: pointer;
+    transform: translate(2px,2px);
+    background-color: #00a3cc;
+   
+}
+
+#developerInfo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(217, 217, 217);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#developerInfo button:hover {
+    cursor: pointer;
+    box-shadow:50px 50px 50px 50px inset rgb(0, 0, 0,0.5) ;
+
+}
+
+
+#about {
+    width: 130px;
+    height: 130px;
+    background-color: #ff0066;
+    margin-top: 35px;
+    border: none;
+    border-radius: 50%;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.2em;
+
+}
+
+#contacts {
+    width: 130px;
+    height: 130px;
+    background-color: #00a3cc;
+    margin-top:35px;
+    border:none;
+    border-radius: 50%;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.3em;
+
+}
+
+#home {
+    width: 130px;
+    height: 130px;
+    background-color: rgb(230, 184, 0);
+    margin-top:35px;
+    border:none;
+    border-radius: 50%;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.3em;
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+    #picture img {
+        width: 35vw;
+        height: 31.5vw;
     }
 
-    #social {
-        top:152%;
-        left:6.7%;
+    .info {
+        font-size: 1em;
+
+    }
+
+    #intro {
+        height: 350px;
+    }
+
+    #imagine {
+        font-size: 1.3em;
+       
+    }
+    
+    
+    #picture p {
+        color: white;
+        -webkit-text-stroke-width: .5px; 
+    }
+
+    #about {
+        width: 90px;
+        height: 90px;
+        font-size: 1em;
+    }
+
+    #home {
+        width: 90px;
+        height: 90px;
+        font-size: 1em;
+    }
+
+    #contacts {
+        width: 90px;
+        height: 90px;
+        font-size: 1em;
+    }
+
+    #social a {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        font-size: 20px;
+
+    }
+    
+    #social a::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    #visit {
+        font-size:1.1em;
     }
 }
+
+
+
+
